@@ -49,7 +49,7 @@ if uploaded_file:
 
                 # Save to CSV
                 output_file = f"output_{run_count}"
-                out_msg = save_csv(df, "output",output_file)
+                out_msg = save_csv(result_df, "output",output_file)
                 st.success(out_msg)
             else :
                 st.error(f"Error evaluating query: {results}")

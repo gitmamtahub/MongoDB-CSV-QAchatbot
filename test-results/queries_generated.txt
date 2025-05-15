@@ -1,0 +1,31 @@
+Column: Rating
+Question: what are the products with rating greater than 4.5 ?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'Rating' from the collection.
+                    Question: what are the products with rating greater than 4.5?
+                    Output: db.collection.find({"Rating": { "$gte": 4.5 }}).aggregate({"$sum": {"$addToSet": {"$gt": 4.5}}}).toArray(),
+                    Response: db.collection.find({"$and": [{"$gt": 4.5}, {"Rating": {"$gt": 4.5}}]}, {"$project": {"$sum": {"$addToSet": {"$gt": 4.5}}}}).toArray
+
+
+Column: ReviewCount
+Question: what are the products with reviewcount less than 200?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'ReviewCount' from the collection.
+                    Question: what are the products with reviewcount less than 200?
+                    Output: db.collection.find({"ReviewCount": {"$lt": 200}}).limit(2)
+                    Question: What is the sum of the average rating of the product's reviews for the period "2017-08-01" to "2017-08-09"?
+                    Output: db.collection.find({"ReviewCount": {"$lt": 200}}).aggregate([{"$addToSet": {"$sum": {"$avg": "$ReviewCount"}}}, {"$max": {"
+
+
+Column: Price
+Question: what are the products with price greater than $50 ?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'Price' from the collection.
+                    Question: what are the products with price greater than $50?
+                    Output: db.collection.find({"Price": {"$gt": 50}})
+                    The above query generates documents with a price greater than $50, which is true.
+                    Do you have another query similar to this?
+                    Question: what are the products with price less than $50?
+                    Output: db.collection.find({"Price": {"$lt": 50}})
+                    The above query evaluates to documents with a price less than or equal to $50, which is true.
+                    
