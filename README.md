@@ -13,6 +13,7 @@ This project:
    python -m venv venv
    venv/Scripts/Activate
    pip install -r requirements.txt
+   streamlit run app.py
 
 ## Structure
 1. Uploaded CSV file will be stored in ./data/input-x.csv (for reference)
@@ -25,13 +26,20 @@ This project:
 3. python version 3.10
 
 ## dir structure
---MongoDB-CSV-QA(root)
+### --MongoDB-CSV-QA(root)
     -.gitignore
     -.README.md
     -utils.py
     -app.py
     -requirement.txt
-    -/data/input-x.vsc
-    -/output
-        -output-x.csv
-        -queries_generated.txt
+#### -/data
+         -input-x.vsc
+#### -/output
+         -output-x.csv
+         -queries_generated.txt
+
+## Test Case Output
+- Sample_data.csv is used and three different queries run with just natural language
+-example1 - what are the products with rating greater than 4.5 ?
+-example2 - what are the products with reviewcount less than 200?
+-example3 - what are the products with price greater than $50 ?
