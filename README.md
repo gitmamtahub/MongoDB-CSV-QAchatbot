@@ -10,6 +10,8 @@ This project:
 
 1. Install dependencies:
    ```bash
+   python -m venv venv
+   venv/Scripts/Activate
    pip install -r requirements.txt
 
 ## Structure
@@ -18,8 +20,9 @@ This project:
 3. Result of query run is saved in ./output/output-x.csv
 
 ## Models used
-1. MongoDB local
+1. MongoDB localhost:27017
 2. local run transformers LLM "Salesforce/codegen-350M-multi"
+3. python version 3.10
 
 ## dir structure
 --MongoDB-CSV-QA(root)
