@@ -39,7 +39,8 @@ This project:
          -queries_generated.txt
 
 ## Test Case Output
-- Sample_data.csv is used and three different queries run with just natural language
--example1 - what are the products with rating greater than 4.5 ?
--example2 - what are the products with reviewcount less than 200?
--example3 - what are the products with price greater than $50 ?
+### test-results folder
+#### Sample_data.csv is used and three different queries run with just natural language
+#### example1 - what are the products with rating greater than 4.5 ?
+#### example2 - what are the products with reviewcount less than 200?
+#### example3 - what are the products with price greater than $50 ?
