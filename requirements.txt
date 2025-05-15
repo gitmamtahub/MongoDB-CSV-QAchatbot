@@ -1,0 +1,7 @@
+"numpy<2"
+pandas
+pymongo
+requests
+torch==2.1.2 
+transformers==4.37.2
+streamlit
