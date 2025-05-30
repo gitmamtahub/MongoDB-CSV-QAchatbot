@@ -28,4 +28,60 @@ Generated Query: You are a MongoDB expert. Convert the following question into a
                     Question: what are the products with price less than $50?
                     Output: db.collection.find({"Price": {"$lt": 50}})
                     The above query evaluates to documents with a price less than or equal to $50, which is true.
-                    
+
+
+Column: Stock
+Question: what are the products with stock less than 200?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'Stock' from the collection.
+                    Question: what are the products with stock less than 200?
+                    Output: db.collection.find({"Stock" : {"$lt" : 200}})
+                '''
+                collection = self.collection
+                
+                if self.type == "document" or self.type == "array":
+                    collection = collection.find({"Stock" : {"$lt" : 200}})
+                
+                else:
+                    collection = collection.find({"Stock" : {"$lt" : 200}})
+                
+                return collection
+        
+        def
+
+
+Column: Stock
+Question: what are the products with stock greater than 20?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'Stock' from the collection.
+                    Question: what are the products with stock greater than 20?
+                    Output: db.collection.find({"Stock": {"$gt": 20}}).limit(1000).toArray()
+        """
+        return [{'$gt': 20}]
+
+    def _get_aggregate_query(self):
+        """Return a query that selects the latest product from the collection."""
+        return {"$group": {"_id": {"$last": "product_id"}}}
+
+
+Column: Brand
+Question: what are the products with brand sony ?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'Brand' from the collection.
+                    Question: what are the products with brand sony?
+                    Output: db.collection.find({"Brand" : "Sony"})
+                    """
+                    pass
+
+
+Column: Category
+Question: what are the products with category electronics ?
+Generated Query: You are a MongoDB expert. Convert the following question into a valid MongoDB query in Python pymongo-style syntax.
+                    Use only the field 'Category' from the collection.
+                    Question: what are the products with category electronics?
+                    Output: db.collection.find({"Category": "Electronics"}).limit(1).batch_size(100)
+                    """
+                    print("\n\n\n\n\nBatch size is 100")
+                    print("\n\n\n\n\nBatch size is 100")
+                    print("\n\n\n\n\nBatch is 100 so I will write a query to the collection.")
+                    print("\n\n\n\

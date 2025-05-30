@@ -55,7 +55,7 @@ def load_csv_to_mongodb(df, run_count):
 
 
 # Load local LLM
-model_name = "Salesforce/codegen-350M-multi"
+model_name = "Salesforce/codegen-350M-mono"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
